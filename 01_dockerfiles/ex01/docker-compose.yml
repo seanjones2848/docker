@@ -1,0 +1,23 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    docker-compose.yml                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sjones <sjones@student.42.us.org>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/08/21 18:25:22 by sjones            #+#    #+#              #
+#    Updated: 2017/08/22 12:15:20 by sjones           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+teamspeak:
+    image: seanjones2848/teamspeak
+    container_name: teamspeak
+    ports:
+     - "9987:9987/udp"
+     - "10011:10011"
+     - "30033:30033"
+    volumes:
+     - ./files:/teamspeak/files
+     - ./logs:/teamspeak/logs
+     - ./configs:/teamspeak/configs

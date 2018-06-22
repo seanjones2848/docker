@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    26                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sjones <sjones@student.42.us.org>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/08/21 12:12:40 by sjones            #+#    #+#              #
+#    Updated: 2018/01/02 15:26:10 by sjones           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create \
+-e OC_USERNAME=admin \
+-e OC_PASSWD=password \
+--network overmind \
+--name engineering-bay \
+--replicas 2 \
+42school/engineering-bay

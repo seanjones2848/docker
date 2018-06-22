@@ -1,0 +1,1 @@
+docker build -t seanjones2848/gogs .

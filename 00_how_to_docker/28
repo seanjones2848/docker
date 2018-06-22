@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    28                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sjones <sjones@student.42.us.org>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/08/21 12:21:49 by sjones            #+#    #+#              #
+#    Updated: 2018/01/02 15:28:46 by sjones           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create \
+--replicas 2 \
+--name marines \
+--network overmind \
+-e OC_USERNAME=admin \
+-e OC_PASSWD=password \
+42school/marine-squad

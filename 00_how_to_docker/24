@@ -1,0 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    24                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sjones <sjones@student.42.us.org>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/08/13 12:45:24 by sjones            #+#    #+#              #
+#    Updated: 2018/01/02 15:24:13 by sjones           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+docker service create \
+--network overmind \
+--name orbital-command \
+-e RABBITMQ_DEFAULT_USER=admin \
+-e RABBITMQ_DEFAULT_PASS=password \
+rabbitmq
